@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - SIMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>SIMS</h2>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="project.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html">Contacts</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Contact Us</h1>
+
+    <div class="card">
+        <h2>Project Developers</h2>
+        <p>Name: The elite four</p>
+        <p>Email: elitefour254@gmail.com</p>
+        <p>Phone: 0110774704</p>
+        <p>Location: nairobi, Kenya</p>
+    </div>
+
+    <div class="card">
+        <h2>Send Us a Message</h2>
+
+        <form id="contactForm">
+            <label>Name</label>
+            <input type="text" id="contactName" required>
+
+            <label>Email</label>
+            <input type="email" id="contactEmail" required>
+
+            <label>Message</label>
+            <textarea id="contactMessage" required></textarea>
+
+            <button type="submit">Prepare Message</button>
+        </form>
+        <p id="contactStatus"></p>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 SIMS</p>
+</footer>
+
+<script>
+document.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("contactName").value;
+    const email = document.getElementById("contactEmail").value;
+    const message = document.getElementById("contactMessage").value;
+
+    const subject = encodeURIComponent("SIMS Contact");
+    const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\nMessage: " + message
+    );
+
+    document.getElementById("contactStatus").textContent =
+        "Opening your email application.";
+
+    window.location.href =
+        "mailto:kariukistella53@gmail.com?subject=" +
+        subject + "&body=" + body;
+});
+</script>
+
+</body>
+</html>

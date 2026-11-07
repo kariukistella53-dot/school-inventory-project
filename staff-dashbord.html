@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - SIMS</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+
+    <header class="staff-header">
+        <h2>SIMS | Staff Dashboard</h2>
+        <div>
+            <span id="staffName">Staff</span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h3>Staff Menu</h3>
+            <a href="staff-dashboard.html">Dashboard</a>
+            <a href="index.html">Manage Inventory</a>
+            <a href="index.html">View Stock</a>
+            <a href="index.html">Inventory Reports</a>
+            <a href="index.html">Low Stock Items</a>
+        </aside>
+
+        <main class="staff-main">
+            <h1>Welcome to the Staff Dashboard</h1>
+            <p>Manage and monitor school inventory activities.</p>
+
+            <div class="staff-cards">
+                <div class="staff-card">
+                    <h3>Total Items</h3>
+                    <p id="totalItems">0</p>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Available Stock</h3>
+                    <p id="availableStock">0</p>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Low Stock Alerts</h3>
+                    <p id="lowStock">0</p>
+                </div>
+
+                <div class="staff-card">
+                    <h3>Staff Status</h3>
+                    <p>Active</p>
+                </div>
+            </div>
+
+            <section class="staff-section">
+                <h2>Staff Activities</h2>
+                <ul>
+                    <li>View available school inventory.</li>
+                    <li>Monitor low-stock items.</li>
+                    <li>Record stock received and issued.</li>
+                    <li>Access inventory reports.</li>
+                </ul>
+            </section>
+
+            <section class="staff-section">
+                <h2>Quick Actions</h2>
+                <a class="action-link" href="index.html">Open Inventory System</a>
+                <a class="action-link" href="index.html">Manage Stock</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="staff.js"></script>
+</body>
+</html>

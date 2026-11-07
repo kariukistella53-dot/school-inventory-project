@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+ 
+<header>
+    <h2>SIMS</h2>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="project.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="staff-login.html">Staff Login</a>
+        <a href="staff-register.html">Staff Register</a>
+        <a href="staff-dashbord.html">Staff Dashboard</a>
+
+    </nav>
+</header>
+
+<main class="container">
+
+    <h1>Inventory Management</h1>
+
+    <div class="card">
+        <h2>Add Inventory Item</h2>
+
+        <form id="itemForm">
+            <input type="hidden" id="editId">
+
+            <label>Item Name</label>
+            <input type="text" id="itemName" required>
+
+            <label>Category</label>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option>Furniture</option>
+                <option>ICT Equipment</option>
+                <option>Books</option>
+                <option>Stationery</option>
+                <option>Laboratory Equipment</option>
+                <option>Sports Equipment</option>
+                <option>Other</option>
+            </select>
+
+            <label>Quantity</label>
+            <input type="number" id="quantity" min="0" required>
+
+            <label>Minimum Stock</label>
+            <input type="number" id="minimum" min="0" value="5" required>
+
+            <label>Description</label>
+            <textarea id="description"></textarea>
+
+            <button type="submit" id="saveButton">Add Item</button>
+            <button type="button" id="cancelEdit" hidden>
+                Cancel
+            </button>
+        </form>
+
+        <p id="formMessage"></p>
+    </div>
+
+    <div class="card">
+        <h2>Inventory Records</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search inventory..."
+        >
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Minimum</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="inventoryRows"></tbody>
+        </table>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 SIMS</p>
+</footer>
+
+</body>
+</html>

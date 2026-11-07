@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h2>SIMS</h2>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="project.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="staff-login.html">Staff Login</a>
+
+    </nav>
+</header>
+
+<main class="container">
+    <h1>School Inventory Dashboard</h1>
+    <p>Welcome to the School Inventory Management System.</p>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total Items</h3>
+            <p id="totalItems">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Quantity</h3>
+            <p id="totalQuantity">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Low Stock</h3>
+            <p id="lowStock">0</p>
+        </div>
+    </div>
+
+    <h2>Recent Inventory</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="recentItems"></tbody>
+    </table>
+</main>
+
+<footer>
+    <p>© 2026 School Inventory Management System</p>
+</footer>
+
+</body>
+</html>

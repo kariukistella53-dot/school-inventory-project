@@ -1,0 +1,288 @@
+/* KWUST COLOUR VARIABLES */
+:root {
+    --primary: #174A8B;
+    --secondary: #C62828;
+    --accent: #E85D5D;
+    --background: #F5F7FA;
+    --white: #FFFFFF;
+    --text: #263445;
+    --success: #198754;
+    --danger: #C62828;
+    --warning: #FD7E14;
+}
+
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 4px solid var(--secondary);
+}
+
+header h2 {
+    color: var(--white);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FFB3B3;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    border-left: 5px solid var(--secondary);
+    padding-left: 12px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.card {
+    background: var(--white);
+    padding: 22px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-top: 4px solid var(--primary);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard .card p {
+    font-size: 30px;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* FORMS */
+form {
+    display: grid;
+    gap: 12px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(23,74,139,0.2);
+}
+
+textarea {
+    min-height: 80px;
+}
+
+/* GENERAL BUTTONS */
+button {
+    background: var(--primary);
+    color: var(--white);
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--secondary);
+}
+
+/* EDIT AND DELETE */
+.edit-btn {
+    background: var(--success);
+    margin: 3px;
+}
+
+.edit-btn:hover {
+    background: #146c43;
+}
+
+.delete-btn {
+    background: var(--danger);
+    margin: 3px;
+}
+
+.delete-btn:hover {
+    background: #9E1B1B;
+}
+
+/* SEARCH */
+.search-box {
+    margin: 15px 0;
+    max-width: 400px;
+}
+
+/* INVENTORY TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--white);
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: var(--primary);
+    color: var(--white);
+}
+
+tr:hover {
+    background: #FCEEEF;
+}
+
+/* STOCK STATUS */
+.status {
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.good {
+    background: #D9F5E4;
+    color: #18794E;
+}
+
+.low {
+    background: #FFE0DC;
+    color: #B42318;
+}
+
+/* LOW STOCK ALERT */
+.alert {
+    background: #FFF0ED;
+    color: #B42318;
+    padding: 15px;
+    border-left: 5px solid var(--secondary);
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+/* STOCK IN AND STOCK OUT */
+.stock-in {
+    background: var(--success);
+}
+
+.stock-in:hover {
+    background: #146c43;
+}
+
+.stock-out {
+    background: var(--warning);
+}
+
+.stock-out:hover {
+    background: #c65d00;
+}
+
+/* REPORT SECTION */
+.report-section {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid var(--secondary);
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.report-btn {
+    background: var(--secondary);
+    margin-top: 10px;
+}
+
+.report-btn:hover {
+    background: #9E1B1B;
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 4px solid var(--secondary);
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .card {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
